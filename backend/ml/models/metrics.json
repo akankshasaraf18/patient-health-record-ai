@@ -1,0 +1,35 @@
+{
+  "trained": true,
+  "timestamp": "2025-10-29T12:02:09.858859",
+  "model_type": "Random Forest Classifier",
+  "accuracy": {
+    "train": 97.5,
+    "test": 95.0
+  },
+  "metrics": {
+    "precision": 92.31,
+    "recall": 100.0,
+    "f1_score": 96.0
+  },
+  "dataset": {
+    "total_samples": 200,
+    "train_samples": 160,
+    "test_samples": 40,
+    "split_ratio": "80/20",
+    "train_distribution": {
+      "high_quality": 96,
+      "low_quality": 64
+    },
+    "test_distribution": {
+      "high_quality": 24,
+      "low_quality": 16
+    }
+  },
+  "model_info": {
+    "algorithm": "Random Forest",
+    "n_estimators": 100,
+    "max_depth": 10,
+    "features": "TF-IDF (max 100 features)",
+    "random_state": 42
+  }
+}

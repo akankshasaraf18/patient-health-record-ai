@@ -1,0 +1,13 @@
+{
+  "model_name": "gpt2",
+  "training_date": "2025-10-29T12:25:41.738618",
+  "dataset_size": 200,
+  "train_size": 160,
+  "test_size": 40,
+  "epochs": 3,
+  "batch_size": 4,
+  "learning_rate": 5e-05,
+  "training_loss": 0.9348312735557556,
+  "eval_loss": 0.2288932055234909,
+  "device": "cpu"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "shiftflow-ai-backend",
+  "version": "1.0.0",
+  "description": "Backend for ShiftFlow AI - Automated Nursing Handoff System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "check": "node check-setup.js"
+  },
+  "keywords": [
+    "nursing",
+    "handoff",
+    "LLM",
+    "SBAR",
+    "healthcare"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.2",
+    "morgan": "^1.10.0",
+    "node-llama-cpp": "^2.0.0",
+    "onnxruntime-node": "^1.15.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1"
+  }
+}
