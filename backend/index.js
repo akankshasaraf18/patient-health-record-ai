@@ -3,9 +3,13 @@ import cors from "cors";
 import morgan from "morgan";
 import { config } from "dotenv";
 import { connectDB } from "./config/database.js";
+import { fileURLToPath } from "url";
+import path from "path";
 
 // Load environment variables
-config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+config({ path: path.join(__dirname, "../.env") });
 
 // Initialize Express app
 const app = express();
@@ -32,12 +36,12 @@ app.use("/api/auth", authRoutes);
 app.use("/api/patients", patientRoutes);
 app.use("/api/patients", entryRoutes);
 app.use("/api/summaries", summaryRoutes);
-app.use("/api", summaryRoutes); // Also mount at /api for patient-specific routes
-app.use("/api/evaluation", evaluationRoutes); // SBAR evaluation routes
-app.use("/api/debug", debugRoutes); // Debug endpoints for troubleshooting
-app.use("/api/reference", referenceRoutes); // Reference generation endpoints
-app.use("/api/ml-metrics", mlMetricsRoutes); // ML model metrics endpoints
-app.use("/api/llm", llmRoutes); // LLM generation and evaluation endpoints
+app.use("/api", summaryRoutes);
+app.use("/api/evaluation", evaluationRoutes);
+app.use("/api/debug", debugRoutes);
+app.use("/api/reference", referenceRoutes);
+app.use("/api/ml-metrics", mlMetricsRoutes);
+app.use("/api/llm", llmRoutes);
 
 // Health check endpoint
 app.get("/health", (req, res) => {
